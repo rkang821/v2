@@ -20,18 +20,18 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* 
-        1. h-screen gives body a full viewport height 
-        2. lg:flex h-full splits header + content at desktop 
-      */}
-      <body className="h-screen antialiased bg-navy">
+      <body className="h-screen overflow-hidden antialiased bg-navy">
         <ThemeProvider attribute="class" defaultTheme={initialTheme}>
-          <div className="lg:flex h-full">
+          <div className="app-container">
             {/* Left column: sticky header */}
-            <Header />
-            <main id="content" className="header-wrapper">
-              {children}
-            </main>
+            <div className="lg:flex h-full">
+              <header className="header-wrapper">
+                <Header />
+              </header>
+              <main id="content" className="content-wrapper">
+                {children}
+              </main>
+            </div>
           </div>
         </ThemeProvider>
       </body>

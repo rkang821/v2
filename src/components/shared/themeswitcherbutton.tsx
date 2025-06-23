@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { SunIcon, MoonIcon } from "./icons";
+import { MoonIcon } from "./icons";
 import { useTheme } from "next-themes";
 
 export function ThemeSwitcherButton() {
@@ -9,20 +9,29 @@ export function ThemeSwitcherButton() {
   const otherTheme = resolvedTheme === "dark" ? "light" : "dark";
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // wait for client hydration so resolvedTheme is correct
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <button
       id="themeswitcherbutton"
       type="button"
-      aria-label={mounted ? `Switch to ${otherTheme} theme` : "Toggle theme"}
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      aria-label={`Switch to ${otherTheme} theme`}
       onClick={() => setTheme(otherTheme)}
+      className="
+        group 
+        rounded-full p-2
+        bg-white/90 dark:bg-zinc-800/90
+        shadow-lg ring-1 ring-zinc-900/5 dark:ring-white/10
+        backdrop-blur transition
+      "
     >
-      <SunIcon className="h-5 w-5 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-blue-500 dark:hidden sm:h-6 sm:w-6 " />
-      <MoonIcon className="hidden h-5 w-5 transition dark:block dark:fill-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-blue-300 sm:h-6 sm:w-6" />
+      <MoonIcon
+        className="
+        h-6 w-6 fill-current text-zinc-700 dark:text-zinc-300 transition group-hover:text-slate-700 dark:group-hover:text-slate-700
+        "
+      />
     </button>
   );
 }
