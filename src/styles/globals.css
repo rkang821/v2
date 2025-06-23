@@ -10,13 +10,24 @@
   font-display: swap;
 }
 
+/*  
+  Base layer for reset/custom base rules 
+  (applies before components/utilities)
+*/
 @layer base {
   body {
-    /* Now Tailwind will pick this up */
-    @apply navy;
+    @apply bg-navy text-slate; /* use your new bg-navy */
+    /* optionally add font-family fallback:
+       font-family: "Inter", sans-serif;
+    */
   }
 }
 
-.main {
-  @apply pt-24 lg:w-[52%] lg:py-24;
+/*
+  Component layer for your own utility classes
+*/
+@layer components {
+  .main {
+    @apply pt-24 lg:w-[52%] lg:py-24;
+  }
 }
