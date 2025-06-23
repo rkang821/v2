@@ -33,4 +33,12 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode: "class",
+  content: [
+    /* … your globs … */
+  ],
+  theme: {
+    /* … */
+  },
+  plugins: [],
 };

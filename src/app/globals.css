@@ -20,16 +20,47 @@
 }
 
 @layer components {
+  .app-container {
+    @apply w-full            /* fill 100% of the viewport width */
+    h-full
+    font-sans;
+  }
+  /* 1) Header wrapper */
   .header-wrapper {
+    /* make room for absolute child (the theme button) */
+    @apply relative;
+    /* Mobile defaults: full-width, 1.5rem padding, centered text */
+    @apply w-full p-6 mx-auto text-center;
+    /* Medium+ (tablet): bump vertical padding to 3rem without touching mobile */
+    @apply md:py-10 md:px-12;
+    /* Desktop: become sticky left column, full-height flex, center children, extra padding */
+    @apply lg:sticky lg:top-0
+    lg:h-screen
+    lg:flex lg:flex-col lg:justify-center lg:space-y-8
+    lg:w-[48%]
+    lg:pl-24         /* 6rem left/right */
+    lg:pt-32 /* 8rem top & bottom */
+    lg:text-left;
+  }
+
+  /* 2) Content wrapper (right pane) */
+  .content-wrapper {
     @apply flex-1
       h-full
       overflow-y-auto
-      pt-24
-      lg:py-24
-      px-6
-      lg:px-12
-      max-w-[72rem]
-      mx-auto;
+      py-24            /* 6rem top & bottom */
+      px-6 lg:px-12    /* 1.5rem → 3rem horizontal on lg */
+      max-w-[72rem]    /* cap width ~1152px */
+      mx-auto; /* center if parent is wider */
+  }
+
+  /* 3) Theme-button wrapper */
+  .theme-button-wrapper {
+    /* Mobile: absolutely pinned in header’s top-right */
+    @apply absolute top-6 right-6;
+
+    /* Desktop: back in flex flow and pushed to bottom */
+    @apply lg:static lg:mt-auto;
   }
 }
 
@@ -47,9 +78,4 @@ body {
 section {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-}
-
-header,
-footer {
-  padding: 1rem 0;
 }
