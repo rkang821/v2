@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/font/inter-var-latin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    /* Now Tailwind will pick this up */
+    @apply navy;
+  }
+}
+
+.main {
+  @apply pt-24 lg:w-[52%] lg:py-24;
+}
