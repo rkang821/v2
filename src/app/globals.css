@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
+/* Light mode defaults */
 :root {
-  --background: #ffffff;
+  --background: #ededed;
   --foreground: #171717;
 }
 
+/* When Tailwind’s “dark” class is applied… */
+html.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+/* Fallback for OS preference on first load */
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
+/* Inline theme variables (if needed) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,70 +28,59 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not(.light) {
-    --background: #808080;
-    --foreground: #ededed;
+@layer base {
+  html {
+    @apply h-screen overflow-hidden;
+  }
+  body {
+    @apply h-full overflow-y-auto font-sans bg-background text-foreground;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl;
+  }
+  h2 {
+    @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
+  }
+  p {
+    @apply mt-3 text-base font-normal tracking-tight sm:text-base;
+  }
+  nav a {
+    @apply text-foreground hover:underline;
+  }
+  nav ul {
+    @apply mt-16 w-max;
   }
 }
 
 @layer components {
+  /* Overall two-column layout */
+  .layout {
+    @apply flex h-full;
+  }
+
+  /* Wrapper for the header section */
   .app-container {
-    @apply w-full            /* fill 100% of the viewport width */
-    h-full
-    font-sans;
+    @apply w-full h-full;
   }
-  /* 1) Header wrapper */
+
   .header-wrapper {
-    /* make room for absolute child (the theme button) */
-    @apply relative;
-    /* Mobile defaults: full-width, 1.5rem padding, centered text */
-    @apply w-full p-6 mx-auto text-center;
-    /* Medium+ (tablet): bump vertical padding to 3rem without touching mobile */
+    @apply relative w-full p-6 mx-auto text-center;
     @apply md:py-10 md:px-12;
-    /* Desktop: become sticky left column, full-height flex, center children, extra padding */
-    @apply lg:sticky lg:top-0
-    lg:h-screen
-    lg:flex lg:flex-col lg:justify-center lg:space-y-8
-    lg:w-[48%]
-    lg:pl-24         /* 6rem left/right */
-    lg:pt-32 /* 8rem top & bottom */
-    lg:text-left;
+    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[48%] lg:pl-24 lg:pt-32 lg:text-left;
   }
 
-  /* 2) Content wrapper (right pane) */
+  /* Main content area */
   .content-wrapper {
-    @apply flex-1
-      h-full
-      overflow-y-auto
-      py-24            /* 6rem top & bottom */
-      px-6 lg:px-12    /* 1.5rem → 3rem horizontal on lg */
-      max-w-[72rem]    /* cap width ~1152px */
-      mx-auto; /* center if parent is wider */
+    @apply flex-1 py-24 px-6 lg:px-12 max-w-[72rem] mx-auto;
   }
 
-  /* 3) Theme-button wrapper */
+  /* Theme switcher placement */
   .theme-button-wrapper {
-    /* Mobile: absolutely pinned in header’s top-right */
-    @apply absolute top-6 right-6;
-
-    /* Desktop: back in flex flow and pushed to bottom */
-    @apply lg:static lg:mt-auto;
+    @apply absolute top-6 right-6 lg:static lg:mt-auto;
   }
-}
 
-html.dark {
-  --background: #808080;
-  --foreground: #ededed;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  /* Icon link (changes color on hover) */
+  .icon-link {
+    @apply text-slate-800 hover:text-slate-400;
+  }
 }
