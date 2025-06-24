@@ -20,11 +20,11 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="h-screen overflow-hidden antialiased bg-navy">
+      <body className="layout">
         <ThemeProvider attribute="class" defaultTheme={initialTheme}>
           <div className="app-container">
             {/* Left column: sticky header */}
-            <div className="lg:flex h-full">
+            <div className="lg:flex h-full overflow-y-auto">
               <header className="header-wrapper">
                 <Header />
               </header>

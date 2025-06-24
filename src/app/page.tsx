@@ -9,14 +9,6 @@ export default function Page() {
       <About />
       <Experience />
       <Projects />
-      <About />
-      <Experience />
-      <Projects /> <About />
-      <Experience />
-      <Projects />
-      <About />
-      <Experience />
-      <Projects />
     </>
   );
 }
