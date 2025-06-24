@@ -67,12 +67,12 @@ html.dark {
   .header-wrapper {
     @apply relative w-full p-6 mx-auto text-center;
     @apply md:py-10 md:px-12;
-    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[48%] lg:pl-24 lg:pt-32 lg:text-left;
+    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[48%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
   }
 
   /* Main content area */
   .content-wrapper {
-    @apply flex-1 py-24 px-6 lg:px-12 max-w-[72rem] mx-auto;
+    @apply flex-1 px-6 lg:p-10 lg:px-12 lg:py-14 lg:pb-24 max-w-[72rem] mx-auto;
   }
 
   /* Theme switcher placement */
