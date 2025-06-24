@@ -31,6 +31,7 @@ html.dark {
 @layer base {
   html {
     @apply h-screen overflow-hidden;
+    scroll-behavior: smooth;
   }
   body {
     @apply h-full overflow-y-auto font-sans bg-background text-foreground;
