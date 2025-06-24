@@ -28,7 +28,7 @@ export default async function RootLayout({
               <header className="header-wrapper">
                 <Header />
               </header>
-              <main id="content" className="content-wrapper">
+              <main id="content" className="content-wrapper pb-10">
                 {children}
               </main>
             </div>
