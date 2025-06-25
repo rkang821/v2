@@ -4,9 +4,10 @@ function OpenAI() {
   return (
     <ul className="list-disc list-inside space-y-0">
       <li>
-        Joined <strong>Example Corp</strong> as a Security Engineer.
+        TBD! Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
+        dolor
       </li>
-      <li>Built internal tools with Next.js and TypeScript.</li>
+      <li> Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</li>
     </ul>
   );
 }
@@ -15,12 +16,12 @@ function StrozFriedberg() {
   return (
     <ul className="list-disc list-inside space-y-0">
       <li>
-        Led incident response engagements involving ransomware, insider threats,
-        APTs, and IP theft.
+        Led incident response engagements involving ransomware, APTs, and IP
+        theft.
       </li>
       <li>
-        Reconstructed attacks from petabyte-scale datasets across SIEM, EDR,
-        NDR, and AV sources.
+        Reconstructed attacks across petabyes of data across SIEM, EDR, among
+        other sources.
       </li>
       <li>
         Conducted deep forensic analysis on Windows, Linux, macOS, mobile
@@ -31,8 +32,8 @@ function StrozFriedberg() {
         incident response.
       </li>
       <li>
-        Developed automation to collect Azure logs via Microsoft Graph API for
-        BEC investigations.
+        Co-developed an automation tool to collect logs via Microsoft Graph API
+        for BEC investigations.
       </li>
       <li>
         Built a system to track Cobalt Strike C2 infrastructure for threat
@@ -54,8 +55,8 @@ function MiddleburyCollege() {
       </li>
       <li>Studied systems programming, security, and ethics in computing.</li>
       <li>
-        Conducted independent research on digital surveillance and its legal
-        implications.
+        Completed senior thesis on predicting the 2018 midterm elections using
+        ML and sentiment analysis - see below for link
       </li>
     </ul>
   );
@@ -67,7 +68,7 @@ function CarnegieMellon() {
       <li>Selected for competitive IT Lab Fellowship at Heinz College.</li>
       <li>
         Collaborated on security-focused projects using policy + technical
-        frameworks.
+        frameworks. blah blah
       </li>
       <li>Presented final deliverables to CMU faculty and industry leaders.</li>
     </ul>

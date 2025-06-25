@@ -5,10 +5,11 @@ import { ProjectEntry } from "@/components/shared/cards/projectscard";
 function Phishing() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      The first blog post I wrote to analyze how phishing has adapted—from brand
-      impersonation and consent phishing to phishing-as-a-service and AI
-      tooling. I combined field observations with real-world detection gaps to
-      give responders a modern framework for understanding attacker tradecraft.
+      The first blog post I wrote to analyze how phishing campaigns have
+      evolved, including tactics such as brand impersonation and consent
+      phishing to phishing-as-a-service and AI tooling. I combined field
+      observations with real-world detection gaps to give responders a modern
+      framework for understanding attacker tradecraft in the phishing domain.
       Below is are my slides from the BSidesPGH 2024 talk built directly from my
       original blog post. I expanded on the concepts to explore phishing beyond
       traditional email—covering QR-based “quishing,” smishing, SIM swapping,
@@ -23,7 +24,7 @@ function M365() {
       A deep-dive forensic guide I authored to help responders determine the
       scope of data exposure in Microsoft 365 compromises. I outlined methods
       for analyzing mailbox syncs, message-level access, delegated permissions,
-      and log correlation across UAL, MAL, and Azure AD sources
+      and log correlation across UAL, MAL, and Azure AD sources.
     </p>
   );
 }
@@ -31,10 +32,10 @@ function M365() {
 function WiCyS() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      WiCyS 2024 talk I created and presented on how AI tools are reshaping
-      phishing campaigns. I covered the rise of AI-generated phish kits,
-      jailbroken chatbots, and attacker tactics that mimic personalization and
-      urgency at scale
+      A deep dive into how AI tools are reshaping phishing campaigns,created and
+      presented at WiCyS 2024 by yours truly. I covered the rise of AI-generated
+      phish kits, jailbroken chatbots, and attacker tactics that mimic
+      personalization and urgency at scale.
     </p>
   );
 }
