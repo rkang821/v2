@@ -18,7 +18,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const initialTheme = cookies().get("theme")?.value ?? "light";
+  const cookieStore = cookies();
+  const initialTheme = cookieStore.get("theme")?.value ?? "light";
 
   return (
     <html
@@ -30,7 +31,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme={initialTheme}>
           <div className="app-container lg:flex lg:justify-center lg:w-full lg:gap-4">
-            <div className="layout flex flex-col lg:flex-row h-full overflow-y-auto">
+            <div className="layout flex flex-col lg:flex-row h-full overflow-y-auto px-4 lg:px-12">
               <header id="header" className="header-wrapper">
                 <Header />
               </header>

@@ -14,8 +14,8 @@ export default function ExperienceSection() {
     >
       <h2 className="text-center">Work Experience</h2>
       <ExperienceEntry experiences={experiences} />
-      <h3 className="text-center">Certifications</h3>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-600 dark:text-zinc-400 mt-4">
+      <h3 className="text-center pt-10">Certifications</h3>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 text-sm text-zinc-600 dark:text-zinc-400 mt-4">
         {certifications.map((cert, idx) => (
           <CertCard key={idx} cert={cert} />
         ))}

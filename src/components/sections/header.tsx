@@ -10,10 +10,8 @@ export default function Header() {
       <div>
         {/* h1, h2, p will pick up your global @layer base styles */}
         <h1>Rachel Kang</h1>
-        <h2>Security Engineer</h2>
-        <p className="hidden lg:block">
-          Security Professional. YouTube enthusiast.
-        </p>
+        <h2>Security Professional</h2>
+        <p className="hidden lg:block">Bay Area. </p>
       </div>
 
       <nav className="hidden lg:block">

@@ -4,7 +4,7 @@ import { ProjectEntry } from "@/components/shared/cards/projectscard";
 
 function Phishing() {
   return (
-    <p>
+    <p className="text-sm leading-relaxed text-foreground">
       The first blog post I wrote to analyze how phishing has adapted—from brand
       impersonation and consent phishing to phishing-as-a-service and AI
       tooling. I combined field observations with real-world detection gaps to
@@ -19,7 +19,7 @@ function Phishing() {
 
 function M365() {
   return (
-    <p>
+    <p className="text-sm leading-relaxed text-foreground">
       A deep-dive forensic guide I authored to help responders determine the
       scope of data exposure in Microsoft 365 compromises. I outlined methods
       for analyzing mailbox syncs, message-level access, delegated permissions,
@@ -30,7 +30,7 @@ function M365() {
 
 function WiCyS() {
   return (
-    <p>
+    <p className="text-sm leading-relaxed text-foreground">
       WiCyS 2024 talk I created and presented on how AI tools are reshaping
       phishing campaigns. I covered the rise of AI-generated phish kits,
       jailbroken chatbots, and attacker tactics that mimic personalization and
@@ -41,7 +41,7 @@ function WiCyS() {
 
 function Website() {
   return (
-    <p>
+    <p className="text-sm leading-relaxed text-foreground">
       A first attempt at coding my porfolio using Next.js and Tailwind to
       showcase my experience from the front lines of the battlefield from my
       experience in the DFIR consulting world. I included my core tooling,
