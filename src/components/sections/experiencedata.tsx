@@ -2,7 +2,7 @@ import { ExperienceEntry } from "@/components/shared/cards/experiencecard";
 
 function OpenAI() {
   return (
-    <ul className="list-disc list-inside space-y-1">
+    <ul className="list-disc list-inside space-y-0">
       <li>
         Joined <strong>Example Corp</strong> as a Security Engineer.
       </li>
@@ -13,44 +13,42 @@ function OpenAI() {
 
 function StrozFriedberg() {
   return (
-    <ul className="list-disc list-inside space-y-1">
-      <ul className="list-disc list-inside space-y-1">
-        <li>
-          Led incident response engagements involving ransomware, insider
-          threats, APTs, and IP theft.
-        </li>
-        <li>
-          Reconstructed attacks from petabyte-scale datasets across SIEM, EDR,
-          NDR, and AV sources.
-        </li>
-        <li>
-          Conducted deep forensic analysis on Windows, Linux, macOS, mobile
-          devices, and removable media.
-        </li>
-        <li>
-          Delivered executive-level briefings to C-suite stakeholders during
-          live incident response.
-        </li>
-        <li>
-          Developed automation to collect Azure logs via Microsoft Graph API for
-          BEC investigations.
-        </li>
-        <li>
-          Built a system to track Cobalt Strike C2 infrastructure for threat
-          intelligence operations.
-        </li>
-        <li>
-          Led a 10-person team responding to a supply chain zero-day, mapping
-          cloud and network access paths.
-        </li>
-      </ul>
+    <ul className="list-disc list-inside space-y-0">
+      <li>
+        Led incident response engagements involving ransomware, insider threats,
+        APTs, and IP theft.
+      </li>
+      <li>
+        Reconstructed attacks from petabyte-scale datasets across SIEM, EDR,
+        NDR, and AV sources.
+      </li>
+      <li>
+        Conducted deep forensic analysis on Windows, Linux, macOS, mobile
+        devices, and removable media.
+      </li>
+      <li>
+        Delivered executive-level briefings to C-suite stakeholders during live
+        incident response.
+      </li>
+      <li>
+        Developed automation to collect Azure logs via Microsoft Graph API for
+        BEC investigations.
+      </li>
+      <li>
+        Built a system to track Cobalt Strike C2 infrastructure for threat
+        intelligence operations.
+      </li>
+      <li>
+        Led a 10-person team responding to a supply chain zero-day, mapping
+        cloud and network access paths.
+      </li>
     </ul>
   );
 }
 
 function MiddleburyCollege() {
   return (
-    <ul className="list-disc list-inside space-y-1">
+    <ul className="list-disc list-inside space-y-0">
       <li>
         B.A. in Computer Science and Political Science, graduated cum laude.
       </li>
@@ -65,7 +63,7 @@ function MiddleburyCollege() {
 
 function CarnegieMellon() {
   return (
-    <ul className="list-disc list-inside space-y-1">
+    <ul className="list-disc list-inside space-y-0">
       <li>Selected for competitive IT Lab Fellowship at Heinz College.</li>
       <li>
         Collaborated on security-focused projects using policy + technical

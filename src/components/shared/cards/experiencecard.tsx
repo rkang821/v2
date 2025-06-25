@@ -61,9 +61,9 @@ export default function ExperienceCards({ experiences }: ExperienceCardsProps) {
                 href={meta.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-semibold text-foreground hover:underline"
+                className="text-sm text-foreground hover:underline"
               >
-                Senior Thesis
+                See Senior Thesis Here
               </a>
             </div>
           )}

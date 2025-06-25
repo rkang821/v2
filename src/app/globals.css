@@ -5,20 +5,19 @@
   --background: #ededed;
   --foreground: #3a3939;
   --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
-  --font-mono: var(--font-geist-mono, monospace);
 }
 
 /* When Tailwind’s `dark` class is applied... */
 html.dark {
-  --background: #3a3939;
-  --foreground: #ffffff;
+  --background: #181818;
+  --foreground: #e5e5e5;
 }
 
 /* Fallback for OS preference on first load */
 @media (prefers-color-scheme: dark) {
   html:not(.light) {
-    --background: #171717;
-    --foreground: #ffffff;
+    --background: #1a1a1a;
+    --foreground: #e5e5e5;
   }
 }
 
@@ -26,8 +25,6 @@ html.dark {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
 }
 
 /* Base styles */
@@ -43,7 +40,9 @@ html.dark {
   h1 {
     @apply text-4xl font-bold tracking-tight sm:text-5xl;
   }
-  h2,
+  h2 {
+    @apply text-xl mt-3 text-lg pb-5 font-medium tracking-tight sm:text-2xl;
+  }
   h3 {
     @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
   }
@@ -71,12 +70,12 @@ html.dark {
   .header-wrapper {
     @apply w-full p-6 text-center;
     @apply md:py-10 md:px-12;
-    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[40%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
+    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[40%] lg:pl-32 lg:ml-8 lg:pt-32 lg:pb-10 lg:text-left;
   }
 
   .content-wrapper {
     @apply w-full px-6;
-    @apply lg:w-[60%] lg:px-12 lg:py-14 lg:pb-24;
+    @apply lg:w-[48%] lg:px-12 lg:pt-25 lg:py-14 lg:pb-24;
   }
 
   .theme-button-wrapper {
@@ -90,6 +89,9 @@ html.dark {
   .experience-card,
   .project-card {
     @apply p-6 rounded-xl bg-background text-foreground shadow hover:shadow-lg transform hover:-translate-y-1 transition;
+  }
+  .cert-card {
+    @apply flex items-center gap-2 p-3 bg-background text-foreground text-sm;
   }
 
   .tag {
