@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   description: "Portfolio and selected projects",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const initialTheme = cookieStore.get("theme")?.value ?? "light";
 
   return (
