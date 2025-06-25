@@ -3,19 +3,19 @@
 /* Light mode defaults */
 :root {
   --background: #ededed;
-  --foreground: #171717;
+  --foreground: #3a3939;
 }
 
 /* When Tailwind’s “dark” class is applied… */
 html.dark {
-  --background: #000000;
+  --background: #3a3939;
   --foreground: #ffffff;
 }
 
 /* Fallback for OS preference on first load */
 @media (prefers-color-scheme: dark) {
   html:not(.light) {
-    --background: #000000;
+    --background: #171717;
     --foreground: #ffffff;
   }
 }

@@ -7,7 +7,7 @@ export default function FooterSection() {
   return (
     <section
       id="footer"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:pb-32 lg:mb-36 lg:scroll-mt-24"
+      className="mb-16 scroll-mt-16 md:mb-20 lg:pb-20 lg:mb-36 lg:scroll-mt-24"
     >
       <Footer />
     </section>

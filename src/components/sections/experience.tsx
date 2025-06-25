@@ -11,6 +11,15 @@ export default function ExperienceSection() {
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
       <ExperienceEntry experiences={experiences} />
+
+      <a
+        href="/documents/RK_Resume2024.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icon-link"
+      >
+        See Resume Here
+      </a>
     </section>
   );
 }
