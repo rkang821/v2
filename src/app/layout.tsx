@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
@@ -8,29 +7,27 @@ import Header from "@/components/sections/header";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-=======
-import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import "./globals.css";
->>>>>>> Stashed changes
 
 export const metadata: Metadata = {
   title: "Rachel Kang – Security Engineer",
   description: "Portfolio and selected projects",
 };
 
-<<<<<<< Updated upstream
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const initialTheme = cookieStore.get("theme")?.value ?? "light";
+  const initialTheme = cookies().get("theme")?.value ?? "light";
 
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body>
+    <html
+      lang="en"
+      className={inter.variable}
+      style={{ colorScheme: initialTheme }}
+      suppressHydrationWarning
+    >
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme={initialTheme}>
           <div className="app-container lg:flex lg:justify-center lg:w-full lg:gap-4">
             <div className="layout flex flex-col lg:flex-row h-full overflow-y-auto">
@@ -43,23 +40,6 @@ export default async function RootLayout({
             </div>
           </div>
         </ThemeProvider>
-=======
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const initialTheme = cookies().get("theme")?.value ?? "light";
-  return (
-    <html
-      lang="en"
-      className={initialTheme}
-      style={{ colorScheme: initialTheme }}
-    >
-      {/* ThemeProvider still swaps themes client-side */}
-      <body className="antialiased">
-        <main className="main">{children}</main>
->>>>>>> Stashed changes
       </body>
     </html>
   );
