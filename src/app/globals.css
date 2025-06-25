@@ -4,9 +4,11 @@
 :root {
   --background: #ededed;
   --foreground: #3a3939;
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
 }
 
-/* When Tailwind’s “dark” class is applied… */
+/* When Tailwind’s `dark` class is applied... */
 html.dark {
   --background: #3a3939;
   --foreground: #ffffff;
@@ -20,28 +22,28 @@ html.dark {
   }
 }
 
-/* Inline theme variables (if needed) */
+/* Inline theme variables (for Tailwind + theming) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
+/* Base styles */
 @layer base {
   html {
     @apply h-screen overflow-hidden;
     scroll-behavior: smooth;
+    font-family: var(--font-sans);
   }
   body {
-    @apply h-full overflow-y-auto font-sans bg-background text-foreground;
+    @apply h-full overflow-y-auto bg-background text-foreground;
   }
   h1 {
     @apply text-4xl font-bold tracking-tight sm:text-5xl;
   }
-  h2 {
-    @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
-  }
+  h2,
   h3 {
     @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
   }
@@ -56,44 +58,40 @@ html.dark {
   }
 }
 
+/* Component styles */
 @layer components {
-  /* Overall two-column layout */
   .layout {
-    @apply flex h-full;
+    @apply flex-1 flex flex-col lg:flex-row;
   }
 
-  /* Wrapper for the header section */
   .app-container {
     @apply w-full h-full;
   }
 
   .header-wrapper {
-    @apply relative w-full p-6 mx-auto text-center;
+    @apply w-full p-6 text-center;
     @apply md:py-10 md:px-12;
     @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[40%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
   }
 
-  /* Main content area */
   .content-wrapper {
-    @apply flex-1 px-6 lg:p-10 lg:px-12 lg:py-14 lg:pb-24 max-w-[72rem] mx-auto;
+    @apply w-full px-6;
+    @apply lg:w-[60%] lg:px-12 lg:py-14 lg:pb-24;
   }
 
-  /* Theme switcher placement */
   .theme-button-wrapper {
     @apply absolute top-6 right-6 lg:static lg:mt-auto;
   }
 
-  /* Icon link (changes color on hover) */
   .icon-link {
     @apply text-foreground hover:text-slate-400;
   }
 
-  /* Card container */
-  .card {
+  .experience-card,
+  .project-card {
     @apply p-6 rounded-xl bg-background text-foreground shadow hover:shadow-lg transform hover:-translate-y-1 transition;
   }
 
-  /* Tag styling */
   .tag {
     @apply inline-block px-2 py-1 text-xs rounded-full bg-foreground/10 text-foreground;
   }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "@theme-toggles/react/css/DarkSide.css";
 import { DarkSide } from "@theme-toggles/react";
 import { useTheme } from "next-themes";
@@ -19,7 +19,8 @@ export function ThemeSwitcherButton() {
       toggled={isDark}
       toggle={() => setTheme(isDark ? "light" : "dark")}
       duration={750}
-      className="text-[26px] text-zinc-700 dark:text-zinc-300"
+      className="text-[26px] dark:text-zinc-300"
+      color="text-zinc-900"
       aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
       id="themeswitcherbutton"
     />

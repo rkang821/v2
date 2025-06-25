@@ -17,14 +17,7 @@ module.exports = {
         green: "#64ffda",
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        mono: [
-          "SFMono-Regular",
-          "Consolas",
-          "Liberation Mono",
-          "Menlo",
-          "monospace",
-        ],
+        sans: ["var(--font-inter)"],
       },
       fontSize: {
         xs: "12px",
