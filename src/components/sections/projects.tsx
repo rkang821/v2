@@ -1,7 +1,8 @@
 // src/components/sections/projects.tsx
 "use client";
 import React from "react";
-import Projects from "@/content/projects.mdx";
+import ProjectCards from "@/components/shared/projectcards";
+import projects from "./project_data";
 
 export default function ProjectsSection() {
   return (
@@ -9,7 +10,7 @@ export default function ProjectsSection() {
       id="projects"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      <Projects />
+      <ProjectCards projects={projects} />
     </section>
   );
 }
