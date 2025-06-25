@@ -1,7 +1,8 @@
 //src/components/sections/experience.tsx
 "use client";
 import React from "react";
-import Experience from "@/content/experience.mdx";
+import ExperienceEntry from "@/components/shared/cards";
+import experiences from "./experiences";
 
 export default function ExperienceSection() {
   return (
@@ -9,11 +10,7 @@ export default function ExperienceSection() {
       id="experience"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
-      <ol className="group/list">
-        <div className="mt-4 leading-normal">
-          <Experience />
-        </div>
-      </ol>
+      <ExperienceEntry experiences={experiences} />
     </section>
   );
 }
