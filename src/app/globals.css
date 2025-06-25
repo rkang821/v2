@@ -70,7 +70,7 @@ html.dark {
   .header-wrapper {
     @apply relative w-full p-6 mx-auto text-center;
     @apply md:py-10 md:px-12;
-    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[48%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
+    @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[40%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
   }
 
   /* Main content area */
@@ -85,6 +85,16 @@ html.dark {
 
   /* Icon link (changes color on hover) */
   .icon-link {
-    @apply text-slate-800 hover:text-slate-400;
+    @apply text-foreground hover:text-slate-400;
+  }
+
+  /* Card container */
+  .card {
+    @apply p-6 rounded-xl bg-background text-foreground shadow hover:shadow-lg transform hover:-translate-y-1 transition;
+  }
+
+  /* Tag styling */
+  .tag {
+    @apply inline-block px-2 py-1 text-xs rounded-full bg-foreground/10 text-foreground;
   }
 }
