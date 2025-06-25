@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+<<<<<<< Updated upstream
 /* Light mode defaults */
 :root {
   --background: #ededed;
@@ -24,17 +25,16 @@ html.dark {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @layer base {
   html {
     @apply h-screen overflow-hidden;
     scroll-behavior: smooth;
+    font-family: var(--font-inter);
   }
   body {
-    @apply h-full overflow-y-auto font-sans bg-background text-foreground;
+    @apply h-full overflow-y-auto bg-background text-foreground;
   }
   h1 {
     @apply text-4xl font-bold tracking-tight sm:text-5xl;
@@ -59,7 +59,7 @@ html.dark {
 @layer components {
   /* Overall two-column layout */
   .layout {
-    @apply flex h-full;
+    @apply flex-1 flex flex-col lg:flex-row;
   }
 
   /* Wrapper for the header section */
@@ -68,14 +68,14 @@ html.dark {
   }
 
   .header-wrapper {
-    @apply relative w-full p-6 mx-auto text-center;
+    @apply w-full p-6 text-center;
     @apply md:py-10 md:px-12;
     @apply lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-center lg:space-y-8 lg:w-[40%] lg:pl-24 lg:pt-32 lg:pb-10 lg:text-left;
   }
 
-  /* Main content area */
   .content-wrapper {
-    @apply flex-1 px-6 lg:p-10 lg:px-12 lg:py-14 lg:pb-24 max-w-[72rem] mx-auto;
+    @apply w-full px-6;
+    @apply lg:w-[60%] lg:px-12 lg:py-14 lg:pb-24;
   }
 
   /* Theme switcher placement */
@@ -89,7 +89,11 @@ html.dark {
   }
 
   /* Card container */
-  .card {
+  .experience-card {
+    @apply p-6 rounded-xl bg-background text-foreground hover:shadow-lg transform hover:-translate-y-1 transition;
+  }
+
+  .project-card {
     @apply p-6 rounded-xl bg-background text-foreground shadow hover:shadow-lg transform hover:-translate-y-1 transition;
   }
 
@@ -97,4 +101,29 @@ html.dark {
   .tag {
     @apply inline-block px-2 py-1 text-xs rounded-full bg-foreground/10 text-foreground;
   }
+=======
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+>>>>>>> Stashed changes
 }
