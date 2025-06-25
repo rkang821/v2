@@ -20,7 +20,7 @@ interface ProjectCardsProps {
 
 export default function ProjectCards({ projects }: ProjectCardsProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-0 gap-6">
+    <div className="grid gap-3">
       {projects.map(({ Component, meta }, index) => (
         <div key={index} className="project-card">
           <small className="block text-xs uppercase text-foreground">

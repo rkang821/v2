@@ -22,7 +22,7 @@ interface ExperienceCardsProps {
 
 export default function ExperienceCards({ experiences }: ExperienceCardsProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-0 gap-6">
+    <div className="grid gap-3">
       {experiences.map(({ Component, meta }, index) => (
         <div key={index} className="experience-card">
           <div className="flex justify-between items-start">
