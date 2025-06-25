@@ -16,7 +16,7 @@ type Props = {
 const CertCard: React.FC<Props> = ({ cert }) => {
   return (
     <li className="cert-card">
-      <Image src={cert.image} alt={cert.alt} className="h-5 w-5" />
+      <Image src={cert.image} alt={cert.alt} width={20} height={20} />
       <div className="flex flex-col">
         {cert.url ? (
           <a
