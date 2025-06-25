@@ -9,9 +9,6 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        navy: "#0a192f",
-        lightNavy: "#112240",
-        lightestNavy: "#233554",
         darkSlate: "#495670",
         slate: "#8892b0",
         lightSlate: "#a8b2d1",

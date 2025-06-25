@@ -42,6 +42,9 @@ html.dark {
   h2 {
     @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
   }
+  h3 {
+    @apply mt-3 text-lg font-medium tracking-tight sm:text-xl;
+  }
   p {
     @apply mt-3 text-base font-normal tracking-tight sm:text-base;
   }
