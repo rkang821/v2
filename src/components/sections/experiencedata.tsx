@@ -4,10 +4,10 @@ function OpenAI() {
   return (
     <ul className="list-disc list-inside space-y-0">
       <li>
-        TBD! Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-        dolor
+        Strengthened insider risk detection and response for a rapidly scaling
+        user base
       </li>
-      <li> Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</li>
+      <li className="italic">Details intentionally limited</li>
     </ul>
   );
 }
@@ -16,12 +16,12 @@ function StrozFriedberg() {
   return (
     <ul className="list-disc list-inside space-y-0">
       <li>
-        Led incident response engagements involving ransomware, APTs, and IP
-        theft.
+        Incident commanded 25+ ransomware, BEC, APT, and IP theft engagements
+        for Fortune 500 clients.
       </li>
       <li>
-        Reconstructed attacks across petabyes of data across SIEM, EDR, among
-        other sources.
+        Reconstructed multi-vector attacks across petabytes of SIEM, EDR, and
+        cloud telemetry.
       </li>
       <li>
         Conducted deep forensic analysis on Windows, Linux, macOS, mobile
@@ -29,15 +29,16 @@ function StrozFriedberg() {
       </li>
       <li>
         Delivered executive-level briefings to C-suite stakeholders during live
-        incident response.
+        incident response, translating technical evidence into actionable
+        business takeaways.
       </li>
       <li>
-        Co-developed an automation tool to collect logs via Microsoft Graph API
-        for BEC investigations.
+        Co-developed an automation tool (Microsoft Graph API) to collect
+        Azure/M365 logs and improve data availability for BEC investigations.
       </li>
       <li>
-        Built a system to track Cobalt Strike C2 infrastructure for threat
-        intelligence operations.
+        Built an internal system to track Cobalt Strike C2 beacons, enriching
+        threat intel feeds for relevant investigations.
       </li>
       <li>
         Led a 10-person team responding to a supply chain zero-day, mapping
@@ -51,12 +52,20 @@ function MiddleburyCollege() {
   return (
     <ul className="list-disc list-inside space-y-0">
       <li>
-        B.A. in Computer Science and Political Science, graduated cum laude.
+        Graduated cum laude with a double major in Computer Science and
+        Political Science.
       </li>
-      <li>Studied systems programming, security, and ethics in computing.</li>
       <li>
-        Completed senior thesis on predicting the 2018 midterm elections using
-        ML and sentiment analysis - see below for link
+        Coursework included a focus on systems programming and U.S. politics
+        (bonus language study - two years of Arabic!)
+      </li>
+      <li>
+        Public Policy Intern for the office of U.S. House of Representatives Rob
+        Woodall, located in the 7th District of Georgia.
+      </li>
+      <li>
+        Senior thesis: Accurately predicted the 2019 U.S. midterms election
+        results using sentiment analysis and machine learning. See below!
       </li>
     </ul>
   );
@@ -67,8 +76,8 @@ function CarnegieMellon() {
     <ul className="list-disc list-inside space-y-0">
       <li>Selected for competitive IT Lab Fellowship at Heinz College.</li>
       <li>
-        Collaborated on security-focused projects using policy + technical
-        frameworks. blah blah
+        Fine-tuned IDS rule sets for a large academic infrastructure,
+        significantly reducing false positives across the network.
       </li>
       <li>Presented final deliverables to CMU faculty and industry leaders.</li>
     </ul>
@@ -79,7 +88,7 @@ const experiences: ExperienceEntry[] = [
   {
     Component: OpenAI,
     meta: {
-      period: "2024–Present",
+      period: "2024-2025",
       title: "Member of Intelligence & Investigations",
       company: { name: "OpenAI", url: "https://openai.com" },
     },
