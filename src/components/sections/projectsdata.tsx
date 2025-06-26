@@ -5,15 +5,14 @@ import { ProjectEntry } from "@/components/shared/cards/projectscard";
 function Phishing() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      The first blog post I wrote to analyze how phishing campaigns have
-      evolved, including tactics such as brand impersonation and consent
-      phishing to phishing-as-a-service and AI tooling. I combined field
-      observations with real-world detection gaps to give responders a modern
-      framework for understanding attacker tradecraft in the phishing domain.
-      Below is are my slides from the BSidesPGH 2024 talk built directly from my
-      original blog post. I expanded on the concepts to explore phishing beyond
-      traditional email—covering QR-based “quishing,” smishing, SIM swapping,
-      and mobile-first attack paths.
+      My blog post that researched the shift from classic brand impersonation
+      and consent phishing to &quot;Phishing as a Service&quot; (PhaaS) and
+      GenAI-powered toolkits. I combined field observations with real-world
+      detection gaps to give responders a framework for understanding attacker
+      tradecraft in the phishing domain. Below are my slides from my BSidesPGH
+      2024 talk where I expanded upon my original blog to cover other attack
+      paths for phishing, including quishing, SIM-swapping, and mobile-first
+      attack paths.
     </p>
   );
 }
@@ -21,10 +20,10 @@ function Phishing() {
 function M365() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      A deep-dive forensic guide I authored to help responders determine the
-      scope of data exposure in Microsoft 365 compromises. I outlined methods
-      for analyzing mailbox syncs, message-level access, delegated permissions,
-      and log correlation across UAL, MAL, and Azure AD sources.
+      A deep-dive forensic blog post I authored to help BEC responders determine
+      the scope of data exposure across Microsoft 365 compromises. I outlined
+      methods for analyzing mailbox syncs, message-level access, delegated
+      permissions, and log correlation across UAL, MAL, and Azure AD sources.
     </p>
   );
 }
@@ -32,10 +31,10 @@ function M365() {
 function WiCyS() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      A deep dive into how AI tools are reshaping phishing campaigns,created and
-      presented at WiCyS 2024 by yours truly. I covered the rise of AI-generated
-      phish kits, jailbroken chatbots, and attacker tactics that mimic
-      personalization and urgency at scale.
+      My WiCyS 2024 deep-dive talk on how AI tools are reshaping phishing
+      campaigns, researched and presented by yours truly. I covered the rise of
+      AI-generated phish kits, jailbroken chatbots, and attacker tactics that
+      mimic personalization and urgency at scale.
     </p>
   );
 }
@@ -43,11 +42,12 @@ function WiCyS() {
 function Website() {
   return (
     <p className="text-sm leading-relaxed text-foreground">
-      A first attempt at coding my porfolio using Next.js and Tailwind to
-      showcase my experience from the front lines of the battlefield from my
-      experience in the DFIR consulting world. I included my core tooling,
-      personal thoughts on the industry, and reflections on how those
-      investigations shape my approach moving forward.
+      My first, very cute attempt at a personal portfolio, built with Next.js
+      and Tailwind. My v1 portfolio includes experiences from my days in the
+      DFIR cybersecurity consulting world. I included my core tooling, personal
+      thoughts, and reflections on how my experience during investigations
+      shaped my approach moving forward. See below for my &quot;DFIR
+      Fundamentals!&quot;
     </p>
   );
 }

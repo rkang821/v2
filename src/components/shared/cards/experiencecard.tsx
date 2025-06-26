@@ -63,7 +63,7 @@ export default function ExperienceCards({ experiences }: ExperienceCardsProps) {
                 rel="noopener noreferrer"
                 className="text-sm text-foreground hover:underline"
               >
-                See Senior Thesis Here
+                See Senior Thesis Poster Here
               </a>
             </div>
           )}
