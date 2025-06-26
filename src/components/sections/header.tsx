@@ -11,7 +11,7 @@ export default function Header() {
         {/* h1, h2, p will pick up your global @layer base styles */}
         <h1>Rachel Kang</h1>
         <h2>Security Professional</h2>
-        <p className="hidden lg:block">Bay Area. </p>
+        <p className="hidden lg:block">27. San Francisco. </p>
       </div>
 
       <nav className="hidden lg:block">
